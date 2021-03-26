@@ -1,0 +1,120 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@-webkit-keyframes obstacleMove {
+  0% {
+    right: -40px;
+  }
+  100% {
+    right: 700px;
+  }
+}
+
+@keyframes obstacleMove {
+  0% {
+    right: -40px;
+  }
+  100% {
+    right: 700px;
+  }
+}
+
+@-webkit-keyframes characterJump {
+  0% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 90px;
+  }
+  75% {
+    bottom: 90px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+@keyframes characterJump {
+  0% {
+    bottom: 0px;
+  }
+  50% {
+    bottom: 90px;
+  }
+  75% {
+    bottom: 90px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #e0e0e0;
+}
+
+#game {
+  height: 350px;
+  width: 700px;
+  position: relative;
+  border: 3px solid #000;
+  margin-top: 20px;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  background-image: url(/images/sandrine-pilloud-160404-i3gamejam-forest.jpg);
+}
+
+#character {
+  position: absolute;
+  height: 100px;
+  width: 70px;
+  bottom: 0;
+  background: transparent;
+  left: 0;
+  background-image: url(/images/robber.png);
+  background-size: cover;
+  background-position: center;
+}
+
+#obstacle {
+  position: absolute;
+  width: 40px;
+  height: 70px;
+  bottom: 0;
+  right: -40px;
+  background-image: url(/images/dwarf.png);
+  background-size: cover;
+  background-position: center;
+  background-color: transparent;
+  -webkit-animation: 2s obstacleMove infinite linear;
+          animation: 2s obstacleMove infinite linear;
+}
+
+#score {
+  font-size: 2rem;
+  font-family: sans-serif;
+  margin-left: 1rem;
+}
+/*# sourceMappingURL=style.css.map */
